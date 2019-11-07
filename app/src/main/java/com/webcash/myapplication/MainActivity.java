@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
     ListView listView;
-    Button btn;
+    Button btn,btnTimer;
     String[] items = {"예를들어 onCreate() Activity가 처음 만들어질 때 호출되는 함수 onStart() 사용자에게 보여지기 직전에 호출되는 함수 등을 통해 Activity에 생명을 부여하는것"
     ,"Task는 어플리케이션에서 실행되는 Activity를 보관하고 관리하며 Stack형태의 연속된 Activity로 이루어진다. 선입후출형태로 나중에 적재된 액티비티일 수록 가장 먼저 사용된다."
     ,"Fragment Life Cycle이란 Activity Life Cycle처럼 생명주기이다. 프래그먼트는 액티비티안에서 존재하게 되므로, Activity의 존재와도 연관된 생명주기들을 추가적으로 가지고 있다. 예를 예를들어 onCreate(),프래그먼트가 Activity에 attach될 때 호출되는 onAttach()함수 등"
@@ -33,11 +33,20 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
     listView = findViewById(R.id.ListView);
     btn = findViewById(R.id.btn1);
+    btnTimer= findViewById(R.id.btnTimer);
+    btnTimer.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this,TimerActivity.class);
+        startActivity(intent);
+        }
+    });
     btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,RecycleView.class);
                 startActivity(intent);
+
             }
         });
     listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
