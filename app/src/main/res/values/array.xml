@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array">
+        <item>Activity Life Cycle</item>
+        <item>Activity Task</item>
+        <item>Fragment Life Cycle</item>
+        <item>List View</item>
+        <item>ViewPager</item>
+        <item>RecyclerView</item>
+        <item>Adapter</item>
+    </string-array>
+    <string-array name="array1">
+        <item>액티비티의 생며주기이다.
+
+</item>
+        <item>
+</item>
+        <item></item>
+        <item>
+</item>
+        <item>
+</item>
+        <item></item>
+        <item>
+
+        </item>
+    </string-array>
+</resources>
