@@ -52,6 +52,5 @@ public class TimerActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-
   }
 }
